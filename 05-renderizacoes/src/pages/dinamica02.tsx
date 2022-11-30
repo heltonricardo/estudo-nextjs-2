@@ -1,3 +1,4 @@
+import Link from "next/link";
 import BASE_URL from "../constants/envs";
 import Produto from "../interfaces/Produto";
 
@@ -30,6 +31,7 @@ export default function Dinamica02({ produtos }: Props) {
     <div>
       <h1>Dinâmica #02</h1>
       <ul>{renderProdutos()}</ul>
+      <Link href="/">Voltar</Link>
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function getServerSideProps() {
   console.log("[SERVER] Executa somente no servidor. Essa mensagem aparece no terminal.");
 
@@ -17,6 +19,7 @@ export default function Dinamica01(props: Props) {
     <div>
       <h1>Dinâmica #01</h1>
       <h2>{props.numero}</h2>
+      <Link href="/">Voltar</Link>
     </div>
   );
 }

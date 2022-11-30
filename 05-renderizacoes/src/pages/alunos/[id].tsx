@@ -1,3 +1,4 @@
+import Link from "next/link";
 import BASE_URL from "../../constants/envs";
 import IAluno from "../../interfaces/IAluno";
 
@@ -16,6 +17,7 @@ export default function Id({ aluno }: Props) {
           <li>E-mail: {aluno.email}</li>
         </ul>
       )}
+      <Link href="/">Voltar</Link>
     </div>
   );
 }

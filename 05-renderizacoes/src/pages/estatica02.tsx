@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface Props {
   numero: number;
 }
@@ -15,6 +17,7 @@ export default function Estatica02(props: Props) {
     <div>
       <h1>Estática #02</h1>
       <h2>{props.numero}</h2>
+      <Link href="/">Voltar</Link>
     </div>
   );
 }
