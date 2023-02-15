@@ -27,9 +27,7 @@ export default function Questionario(props: Props) {
           tempoEsgotado={props.irParaProximoPasso}
         />
       )}
-      <Botao onClick={props.irParaProximoPasso}>
-        {props.isUltimaQuestao ? "Finalizar" : "Próxima"}
-      </Botao>
+      <Botao onClick={props.irParaProximoPasso}>{props.isUltimaQuestao ? "Finalizar" : "Próxima"}</Botao>
     </div>
   );
 }

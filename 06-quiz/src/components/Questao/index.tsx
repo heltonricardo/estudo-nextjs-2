@@ -18,12 +18,7 @@ const letras = [
   { valor: "D", cor: "#bce596" },
 ];
 
-export default function Questao({
-  questao,
-  tempoParaResponder,
-  respostaFornecida,
-  tempoEsgotado,
-}: Props) {
+export default function Questao({ questao, tempoParaResponder, respostaFornecida, tempoEsgotado }: Props) {
   function renderRespostas() {
     return questao.respostas.map((resp, i) => (
       <Resposta
@@ -40,11 +35,7 @@ export default function Questao({
   return (
     <div className={styles.questao}>
       <Enunciado enunciado={questao.enunciado} />
-      <Temporizador
-        key={questao.id}
-        duracao={tempoParaResponder || 10}
-        tempoEsgotado={tempoEsgotado}
-      />
+      <Temporizador key={questao.id} duracao={tempoParaResponder || 10} tempoEsgotado={tempoEsgotado} />
       {renderRespostas()}
     </div>
   );

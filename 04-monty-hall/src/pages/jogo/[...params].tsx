@@ -28,22 +28,14 @@ export default function Jogo() {
 
   function renderPortas() {
     return portas.map((p) => (
-      <Porta
-        key={p.numero}
-        value={p}
-        onChange={(novaPorta) => setPortas(atualizarPortas(portas, novaPorta))}
-      />
+      <Porta key={p.numero} value={p} onChange={(novaPorta) => setPortas(atualizarPortas(portas, novaPorta))} />
     ));
   }
 
   return (
     <div className={styles.oJogo}>
       <div className={styles.portas}>
-        {isValido ? (
-          renderPortas()
-        ) : (
-          <h1 style={{ color: "white", fontSize: "3rem" }}>Valores inválidos</h1>
-        )}
+        {isValido ? renderPortas() : <h1 style={{ color: "white", fontSize: "3rem" }}>Valores inválidos</h1>}
       </div>
       <div className={styles.botoes}>
         <Link href="/">

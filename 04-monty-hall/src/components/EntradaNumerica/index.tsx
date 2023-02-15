@@ -9,7 +9,7 @@ interface Props {
 export default function EntradaNumerica({ text, value, onChange }: Props) {
   const dec = () => onChange(value - 1);
   const inc = () => onChange(value + 1);
-  
+
   return (
     <div className={styles.entradaNumerica}>
       <span className={styles.texto}>{text}</span>
